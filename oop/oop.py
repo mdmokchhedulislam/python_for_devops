@@ -11,3 +11,19 @@ class test:
 
 test1 = test("gopal", "gopal@gmail.com")
 test1.showData();
+
+
+
+class service:
+    def start(self):
+        print("service is started")
+
+
+class webservice(service):
+     def start(self):
+        print("service is started from webservice")
+
+
+
+service1=webservice()
+service1.start()
