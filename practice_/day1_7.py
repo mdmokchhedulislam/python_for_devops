@@ -18,10 +18,24 @@ def is_prime(n):
 
 # print(is_prime(36))
 
-n= int(input("enter your number for check total: "))
+# n= int(input("enter your number for check total: "))
+n=10
 sum = 0 
 for i in range(1, n+1):
     sum +=i
 
-print(sum)
+# print(sum)
+
+
+# comprehension of list 
+
+
+square = []
+
+n = int(input("enter your number for create list"))
+
+for i in range(n+1):
+    square.append(i*i)
+
+print(square)
 
