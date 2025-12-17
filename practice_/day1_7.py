@@ -16,4 +16,12 @@ def is_prime(n):
             return False
     return True
 
-print(is_prime(36))
+# print(is_prime(36))
+
+n= int(input("enter your number for check total: "))
+sum = 0 
+for i in range(1, n+1):
+    sum +=i
+
+print(sum)
+
