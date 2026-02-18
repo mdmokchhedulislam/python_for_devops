@@ -5,8 +5,8 @@ def find_running_ec2():
     response = ec2.describe_instances(
         Filters=[
             {
-                'Name': 'instance-state-name',  # instance এর state filter
-                'Values': ['running']  # শুধু running instance
+                'Name': 'instance-state-name',  
+                'Values': ['running']  
             },
         ]
     )
