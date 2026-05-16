@@ -38,69 +38,87 @@
 
 # linkedlist
 
-class Node:
-    def __init__(self, data):
-        self.data=data
-        self.next=None
+# class Node:
+#     def __init__(self, data):
+#         self.data=data
+#         self.next=None
 
-class LinkedList:
-    def __init__(self):
-        self.head=None
+# class LinkedList:
+#     def __init__(self):
+#         self.head=None
     
-    def prepend(self, data):
-        new_node = Node(data)
-        new_node.next = self.head
-        self.head = new_node
+#     def prepend(self, data):
+#         new_node = Node(data)
+#         new_node.next = self.head
+#         self.head = new_node
     
-    def append(self, data):
-        new_node=Node(data)
-        if not self.head:
-            self.head=new_node
-            return
-        last = self.head
-        while last.next:
-            last=last.next
-        last.next=new_node
+#     def append(self, data):
+#         new_node=Node(data)
+#         if not self.head:
+#             self.head=new_node
+#             return
+#         last = self.head
+#         while last.next:
+#             last=last.next
+#         last.next=new_node
 
         
-    def delete_node(self, key):
-        temp = self.head
+#     def delete_node(self, key):
+#         temp = self.head
 
-        if temp is not None:
-            if temp.data == key:
-                self.head = temp.next
-                temp = None
-                return
+#         if temp is not None:
+#             if temp.data == key:
+#                 self.head = temp.next
+#                 temp = None
+#                 return
 
-        prev = None
-        while temp is not None:
-            if temp.data == key:
-                break
-            prev = temp
-            temp = temp.next
+#         prev = None
+#         while temp is not None:
+#             if temp.data == key:
+#                 break
+#             prev = temp
+#             temp = temp.next
 
-        if temp is None:
-            print("\nData not found in the list!")
-            return
+#         if temp is None:
+#             print("\nData not found in the list!")
+#             return
 
-        prev.next = temp.next
-        temp = None
-
-
-    def display(self):
-        current = self.head
-        while current:
-            print(current.data, end=" -> ")
-            current = current.next
-        print("None")
-
-mylist = LinkedList()
-mylist.append(10)
-mylist.append(20)
-mylist.append(30)
-mylist.append(40)
-mylist.append(50)
+#         prev.next = temp.next
+#         temp = None
 
 
+#     def display(self):
+#         current = self.head
+#         while current:
+#             print(current.data, end=" -> ")
+#             current = current.next
+#         print("None")
 
-mylist.display()
+# mylist = LinkedList()
+# mylist.append(10)
+# mylist.append(20)
+# mylist.append(30)
+# mylist.append(40)
+# mylist.append(50)
+# mylist.display()
+
+
+names = ["Amin", "Karim", "Rahim", "Sabbir", "Tamim"]
+def binary_search(names, target):
+    left= 0
+    right=len(names) - 1
+
+    while left <= right:
+        mid = (left + right) // 2
+
+        if names[mid] == target:
+            return mid
+        elif names[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+
+    return -1  
+
+targetIndex=binary_search(names, "Amin")
+print(targetIndex)
