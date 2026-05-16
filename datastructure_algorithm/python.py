@@ -103,22 +103,46 @@
 # mylist.display()
 
 
-names = ["Amin", "Karim", "Rahim", "Sabbir", "Tamim"]
-def binary_search(names, target):
-    left= 0
-    right=len(names) - 1
+# names = ["Amin", "Karim", "Rahim", "Sabbir", "Tamim"]
+# def binary_search(names, target):
+#     left= 0
+#     right=len(names) - 1
 
-    while left <= right:
-        mid = (left + right) // 2
+#     while left <= right:
+#         mid = (left + right) // 2
 
-        if names[mid] == target:
-            return mid
-        elif names[mid] < target:
-            left = mid + 1
-        else:
-            right = mid - 1
+#         if names[mid] == target:
+#             return mid
+#         elif names[mid] < target:
+#             left = mid + 1
+#         else:
+#             right = mid - 1
 
-    return -1  
+#     return -1  
 
-targetIndex=binary_search(names, "Amin")
-print(targetIndex)
+# targetIndex=binary_search(names, "Amin")
+# print(targetIndex)
+
+
+
+
+
+
+
+# find maximum number
+
+# arr = [10, 25, 5, 78, 30]
+# max_num = arr[0]
+# for num in arr:
+#     if num > max_num:
+#         max_num=num
+
+# print(f"max number is  {max_num}")
+
+arr = [10, 25, 5, 78, 30]
+lowest_num = arr[0]
+for num in arr:
+    if num < lowest_num:
+        lowest_num=num
+
+print(f"max number is  {lowest_num}")
